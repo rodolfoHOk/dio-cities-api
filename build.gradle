@@ -15,8 +15,17 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// https://mvnrepository.com/artifact/com.vladmihalcea/hibernate-types-52
+	implementation group: 'com.vladmihalcea', name: 'hibernate-types-52', version: '2.14.0'
+	implementation 'org.postgresql:postgresql'
+
 	runtimeOnly 'org.postgresql:postgresql'
+
+	compileOnly 'org.projectlombok:lombok:1.18.22'
+	annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
 }
 
 test {
