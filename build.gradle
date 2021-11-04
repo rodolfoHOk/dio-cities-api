@@ -19,22 +19,12 @@ dependencies {
 	implementation group: 'com.vladmihalcea', name: 'hibernate-types-52', version: '2.14.0'
 	implementation 'org.postgresql:postgresql'
 
-	runtimeOnly 'org.postgresql:postgresql'
-
 	compileOnly 'org.projectlombok:lombok:1.18.22'
 	annotationProcessor 'org.projectlombok:lombok:1.18.22'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
 }
 
 test {
 	useJUnitPlatform()
-}
-
-apply plugin: 'java'
-jar {
-	manifest {
-		attributes 'Main-Class': 'me.dio.rodolfohok.diocitiesapi.DioCitiesApiApplication'
-	}
 }
